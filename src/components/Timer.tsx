@@ -36,7 +36,7 @@ export default function Timer({ name, duration }: TimerProps) {
     return (
         <Container as="article">
             <h2>
-                {name} : {duration}
+                {name} : {duration}s
             </h2>
             <p>
                 <progress max={duration * 1000} value={remainingTime} />
