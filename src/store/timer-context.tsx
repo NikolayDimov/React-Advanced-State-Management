@@ -1,6 +1,6 @@
 import { type ReactNode, createContext, useContext, useReducer } from "react";
 
-type Timer = {
+export type Timer = {
     name: string;
     duration: number;
 };
@@ -62,7 +62,7 @@ function timersReducer(state: TimersState, action: Action): TimersState {
     if (action.type === "STOP_TIMERS") {
         return {
             ...state,
-            isRunning: true,
+            isRunning: false,
         };
     }
     if (action.type === "ADD_TIMER") {
